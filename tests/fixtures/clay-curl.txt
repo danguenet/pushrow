@@ -1,0 +1,4 @@
+curl --url 'https://api.clay.com/v3/sources/webhook/example-test-id' \
+  --header 'Content-Type: application/json' \
+  --header 'x-clay-webhook-auth: local-test-token' \
+  --data '{"example":"ignored"}'

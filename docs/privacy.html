@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Posthook privacy policy" />
+    <title>Posthook Privacy Policy</title>
+    <style>
+      :root {
+        color: #172033;
+        background: #f5f7fb;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        width: min(720px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0 80px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 6vw, 3.25rem);
+        letter-spacing: -0.04em;
+      }
+      h2 {
+        margin: 36px 0 10px;
+        font-size: 1.1rem;
+      }
+      p,
+      li {
+        color: #536078;
+        line-height: 1.7;
+      }
+      .eyebrow {
+        color: #3157d5;
+        font-size: 0.8rem;
+        font-weight: 750;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .updated {
+        margin-top: 0;
+        font-size: 0.85rem;
+      }
+      .card {
+        margin-top: 28px;
+        padding: 22px;
+        border: 1px solid #dfe3eb;
+        border-radius: 16px;
+        background: white;
+      }
+      a {
+        color: #3157d5;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="eyebrow">Posthook</div>
+      <h1>Privacy policy</h1>
+      <p class="updated">Effective July 14, 2026</p>
+      <div class="card">
+        <strong>Local by design.</strong>
+        <p>
+          Posthook has no Posthook-operated server, account system, analytics, advertising, or
+          telemetry.
+        </p>
+      </div>
+      <h2>Data handled</h2>
+      <p>
+        Posthook stores the destinations, optional authentication values, and routing rules you
+        create in persistent Chrome extension storage on your device. That storage is private to
+        trusted Posthook contexts, but it is not encrypted at rest.
+      </p>
+      <p>
+        When you click Send, Posthook derives source, URL, record ID, and object type from the
+        active tab URL and sends those four fields to the Clay webhook you selected. Clay handles
+        that request under its own terms and privacy practices.
+      </p>
+      <h2>Data not collected</h2>
+      <p>
+        Posthook does not collect page content, cookies, browsing history, send history, analytics,
+        telemetry, or webhook response bodies. It does not sell or share data for advertising.
+      </p>
+      <h2>Your controls</h2>
+      <p>
+        You can edit or delete destinations and rules at any time. Delete all local data removes
+        every Posthook setting and token and revokes the optional Clay host permission.
+      </p>
+      <h2>Permissions</h2>
+      <p>
+        Posthook uses activeTab after you invoke the toolbar action, storage for local settings, and
+        optional access to api.clay.com only for a request you initiate.
+      </p>
+      <h2>Changes and contact</h2>
+      <p>
+        Material changes will be published with the extension and repository. Use the public
+        repository for privacy questions without including secrets or personal data, and its private
+        Security Advisories feature for vulnerabilities.
+      </p>
+    </main>
+  </body>
+</html>
