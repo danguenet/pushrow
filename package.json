@@ -1,14 +1,16 @@
 {
-  "name": "posthook",
+  "name": "pushrow",
   "version": "0.1.0",
-  "description": "Send LinkedIn and CRM records to Clay webhooks from Chrome.",
+  "description": "Push LinkedIn and CRM records to Clay tables from Chrome.",
   "type": "module",
-  "private": false,
+  "private": true,
   "license": "MIT",
   "engines": {
     "node": ">=24"
   },
   "scripts": {
+    "assets": "node scripts/render-assets.mjs && npm run store:screenshot",
+    "store:screenshot": "npm run build && node scripts/capture-store-screenshot.mjs",
     "dev": "wxt",
     "build": "wxt build",
     "zip": "wxt zip",
@@ -18,12 +20,15 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
     "test:e2e": "npm run build && playwright test",
-    "check": "npm run lint && npm run format:check && npm run typecheck && npm test && npm run build"
+    "package:check": "node --test scripts/*.test.mjs && node scripts/validate-extension.mjs",
+    "check": "npm run lint && npm run format:check && npm run typecheck && npm run test:coverage && npm run build && npm run package:check"
   },
   "dependencies": {
     "lucide-react": "^1.24.0",
+    "re2js": "^2.8.6",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
@@ -35,6 +40,7 @@
     "@types/node": "^26.1.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.1.10",
     "@wxt-dev/module-react": "^1.2.2",
     "eslint": "^10.7.0",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -45,5 +51,13 @@
     "typescript-eslint": "^8.64.0",
     "vitest": "^4.1.10",
     "wxt": "^0.20.27"
+  },
+  "overrides": {
+    "adm-zip": "0.6.0",
+    "esbuild": "0.28.1",
+    "multimatch": "8.0.0",
+    "shell-quote": "1.9.0",
+    "tmp": "0.2.7",
+    "uuid": "11.1.1"
   }
 }

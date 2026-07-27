@@ -2,13 +2,13 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { browser } from 'wxt/browser';
 import {
   deleteDestination,
-  getState,
   replaceRules,
   upsertDestination,
   upsertRule,
-} from '@/lib/storage';
-import type { Destination, RoutingRule } from '@/lib/types';
-import { STORAGE_KEY } from '@/lib/constants';
+} from '@/background/configuration';
+import { getState } from '@/platform/storage/app-state';
+import { STORAGE_KEY } from '@/shared/constants';
+import type { Destination, RoutingRule } from '@/shared/types';
 
 const destination: Destination = {
   id: 'destination',

@@ -2,7 +2,7 @@
 node_modules/
 
 # WXT and build output
-.output/
+dist/
 .wxt/
 *.zip
 *.tsbuildinfo

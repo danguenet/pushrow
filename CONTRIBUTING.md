@@ -1,8 +1,8 @@
 # Contributing
 
-Thank you for improving Posthook.
+Thank you for improving Push Row.
 
-1. Use Node 24 LTS and run `npm install`.
+1. Use Node 24 LTS, run `npm install`, then install the test browser with `npx playwright install chromium`.
 2. Keep changes focused and never commit real webhook URLs, tokens, CRM URLs, or customer data.
 3. Add tests for parser, storage, routing, or request behavior changes.
 4. Run `npm run check` before opening a pull request.

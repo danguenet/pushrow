@@ -1,0 +1,293 @@
+.rules-workspace {
+  min-height: calc(100vh - 166px);
+  margin: 0 -32px;
+  background: rgba(255, 255, 255, 0.38);
+}
+.rules-ledger {
+  min-width: 0;
+  min-height: calc(100vh - 166px);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px 18px;
+}
+.rules-table-wrap {
+  overflow-x: auto;
+}
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.rules-table th {
+  padding: 16px 14px 13px;
+  color: #536078;
+  font-size: 11px;
+  font-weight: 750;
+  text-align: left;
+}
+.rules-table th:nth-child(1) {
+  width: 10%;
+}
+.rules-table th:nth-child(2) {
+  width: 27%;
+}
+.rules-table th:nth-child(3) {
+  width: 24%;
+}
+.rules-table th:nth-child(4) {
+  width: 27%;
+}
+.rules-table th:nth-child(5) {
+  width: 12%;
+}
+.rules-table td {
+  height: 82px;
+  padding: 12px 14px;
+  border-top: 1px solid #e2e6ee;
+  color: #344054;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.rules-table tbody tr {
+  transition: background 120ms ease;
+  cursor: pointer;
+}
+.rules-table tbody tr:hover {
+  background: rgba(248, 249, 252, 0.78);
+}
+.rules-table tbody tr.selected {
+  background: #f1f4ff;
+  box-shadow: inset 0 0 0 1px #b8c6ff;
+}
+.rules-table tbody tr.selected td:first-child {
+  box-shadow: inset 3px 0 #3157d5;
+}
+.rules-table tbody tr.disabled td:not(:last-child) {
+  opacity: 0.55;
+}
+.rule-select {
+  width: 100%;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.rule-select .item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #edf0ff;
+}
+.rule-name-copy,
+.rule-cell {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+.rule-name-copy strong,
+.rule-cell strong {
+  overflow: hidden;
+  color: #172033;
+  font-size: 12.5px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rule-name-copy span,
+.rule-cell span {
+  overflow: hidden;
+  color: #748096;
+  font-size: 10.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rule-destination {
+  overflow: hidden;
+  display: block;
+  color: #3157d5;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.priority-controls {
+  display: grid;
+  width: 28px;
+  place-items: center;
+  gap: 1px;
+}
+.priority-controls button {
+  width: 26px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 5px;
+  color: #7c8698;
+  background: transparent;
+  cursor: pointer;
+}
+.priority-controls button:hover:not(:disabled) {
+  color: #3157d5;
+  background: #eef1fb;
+}
+.priority-controls button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.priority-controls span {
+  color: #7f899b;
+  font-size: 10px;
+  font-weight: 700;
+}
+.switch {
+  position: relative;
+  width: 32px;
+  height: 19px;
+  display: block;
+}
+.switch input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #c6ccd7;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+.switch span::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  transition: transform 120ms ease;
+}
+.switch input:checked + span {
+  background: #3157d5;
+}
+.switch input:checked + span::after {
+  transform: translateX(13px);
+}
+.switch input:focus-visible + span {
+  outline: 3px solid #9db1ff;
+  outline-offset: 2px;
+}
+.segmented-field {
+  margin: 0 0 14px;
+  padding: 0;
+  border: 0;
+}
+.segmented-field legend {
+  margin-bottom: 6px;
+  color: #465168;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.segmented-field > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid #cfd5e2;
+  border-radius: 9px;
+}
+.segmented-field label {
+  position: relative;
+}
+.segmented-field label + label {
+  border-left: 1px solid #cfd5e2;
+}
+.segmented-field input {
+  position: absolute;
+  opacity: 0;
+}
+.segmented-field span {
+  display: flex;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  color: #657087;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.segmented-field input:checked + span {
+  color: #3157d5;
+  background: #edf0ff;
+}
+.segmented-field input:focus-visible + span {
+  outline: 3px solid #9db1ff;
+  outline-offset: -3px;
+}
+.test-box {
+  margin: 2px 0 0;
+  padding: 14px;
+  border: 1px solid #e0e4ec;
+  border-radius: 10px;
+  background: #fafbfc;
+}
+.test-box input {
+  height: 38px;
+  font-size: 11px;
+}
+.test-match,
+.test-miss {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 10.5px;
+  font-weight: 650;
+}
+.test-match {
+  color: #1c7041;
+}
+.test-miss {
+  color: #8e3940;
+}
+
+@media (max-width: 900px) {
+  .rules-workspace {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .rules-ledger {
+    padding: 20px 14px 16px;
+  }
+  .rules-table th:nth-child(3),
+  .rules-table td:nth-child(3) {
+    display: none;
+  }
+  .rules-table th:nth-child(1) {
+    width: 16%;
+  }
+  .rules-table th:nth-child(2) {
+    width: 36%;
+  }
+  .rules-table th:nth-child(4) {
+    width: 32%;
+  }
+  .rules-table th:nth-child(5) {
+    width: 16%;
+  }
+}

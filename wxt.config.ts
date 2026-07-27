@@ -1,6 +1,13 @@
 import { defineConfig } from 'wxt';
 
 export default defineConfig({
+  srcDir: 'src',
+  publicDir: 'src/public',
+  outDir: 'dist',
+  outDirTemplate: '.',
+  zip: {
+    artifactTemplate: '../{{name}}-{{version}}-{{browser}}.zip',
+  },
   modules: ['@wxt-dev/module-react'],
   dev: {
     server: {
@@ -9,14 +16,14 @@ export default defineConfig({
     },
   },
   manifest: {
-    name: 'Posthook',
-    short_name: 'Posthook',
-    description: 'Send LinkedIn and CRM records to your Clay tables.',
+    name: 'Push Row',
+    short_name: 'Push Row',
+    description: 'Push LinkedIn and CRM records to Clay tables from Chrome.',
     minimum_chrome_version: '102',
     permissions: ['activeTab', 'storage'],
     optional_host_permissions: ['https://api.clay.com/*'],
     action: {
-      default_title: 'Send this record with Posthook',
+      default_title: 'Send this record with Push Row',
     },
     icons: {
       16: '/icon-16.png',

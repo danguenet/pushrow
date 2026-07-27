@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
-import { postToClay, type Fetcher } from '@/lib/clay';
-import type { Destination, PageRecord } from '@/lib/types';
+import { postToClay, type Fetcher } from '@/integrations/clay';
+import type { Destination, PageRecord } from '@/shared/types';
 
 const destination: Destination = {
   id: 'destination',
