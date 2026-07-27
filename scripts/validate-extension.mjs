@@ -45,6 +45,12 @@ if (!(await exists(manifestPath))) {
 }
 
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+const packageJson = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8'));
+if (manifest.version !== packageJson.version) {
+  errors.push(
+    `Manifest version ${manifest.version} does not match package version ${packageJson.version}.`,
+  );
+}
 await requireReference(manifest.background?.service_worker, 'background.service_worker');
 await requireReference(manifest.action?.default_popup, 'action.default_popup');
 await requireReference(manifest.options_ui?.page, 'options_ui.page');

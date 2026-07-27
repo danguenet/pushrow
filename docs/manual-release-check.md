@@ -14,9 +14,10 @@ Use only a Clay table owned by the tester. Never paste its URL or token into an 
 
 ## Publish a GitHub release
 
-1. Confirm `package.json` and `CHANGELOG.md` contain the same release version.
-2. Merge the release commit to `main` and confirm the `verify` and `e2e` CI jobs pass.
-3. Create and push an annotated `v<version>` tag, such as `v0.1.0`.
-4. Confirm the release workflow publishes `pushrow-<version>-chrome.zip` to the matching GitHub
-   Release.
+1. Confirm `package.json`, `package-lock.json`, and `CHANGELOG.md` contain the same release version.
+2. Merge the release commit to `main` and confirm the build-and-release workflow passes and retains
+   the verified archive and SHA-256 checksum.
+3. Create and push an annotated `v<version>` tag, such as `v1.0.0`.
+4. Confirm the tag run validates the version and publishes the same verified
+   `pushrow-<version>-chrome.zip` and checksum to the matching GitHub Release.
 5. Download that asset, extract it, load it unpacked in Chrome, and repeat the smoke checks above.

@@ -1,6 +1,6 @@
 {
   "name": "pushrow",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Push LinkedIn and CRM records to Clay tables from Chrome.",
   "keywords": [
     "chrome-extension",
@@ -22,6 +22,7 @@
   "type": "module",
   "private": true,
   "license": "MIT",
+  "packageManager": "npm@11.18.0",
   "engines": {
     "node": ">=24"
   },

@@ -6,7 +6,7 @@
 **CRM records to Clay, in one click.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-3157D5.svg)](LICENSE)
-[![CI](https://github.com/danguenet/pushrow/actions/workflows/ci.yml/badge.svg)](https://github.com/danguenet/pushrow/actions/workflows/ci.yml)
+[![Build and test](https://github.com/danguenet/pushrow/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/danguenet/pushrow/actions/workflows/build-and-release.yml)
 [![GitHub release](https://img.shields.io/github/v/release/danguenet/pushrow?display_name=tag&sort=semver)](https://github.com/danguenet/pushrow/releases)
 [![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white)](.nvmrc)
 [![Chrome MV3](https://img.shields.io/badge/Chrome-Manifest_V3-4285F4?logo=googlechrome&logoColor=white)](wxt.config.ts)
@@ -15,7 +15,7 @@
 
 Push Row is a privacy-focused Chrome extension for pushing LinkedIn and CRM records to [Clay](https://www.clay.com/) webhooks. It recognizes the active record from its URL, recommends a destination using your routing rules, and sends only when you click **Send**.
 
-**Project status:** early release (`0.1.x`). Push Row supports desktop Chrome only and is not yet
+**Project status:** stable release (`1.0.x`). Push Row supports desktop Chrome only and is not yet
 distributed through the Chrome Web Store.
 
 ![Push Row destination settings](store-assets/screenshot-1280x800.png)
@@ -111,6 +111,11 @@ npm run test:e2e
 Run `npm run assets` after changing an SVG source or the settings UI. It regenerates the icons,
 promotional graphics, and repository social preview, builds the extension, and captures the store
 screenshot from the actual options page.
+
+Pull requests, pushes to `main`, version tags, and manual runs execute one build-and-release workflow.
+Successful runs retain a verified `pushrow-<version>-chrome.zip` artifact and SHA-256 checksum for 14
+days. A matching `v<version>` tag publishes that exact verified archive to a GitHub Release without
+rebuilding it.
 
 Before a release, complete the [manual user-owned webhook check](docs/manual-release-check.md). Tests and fixtures must contain placeholder credentials only.
 
