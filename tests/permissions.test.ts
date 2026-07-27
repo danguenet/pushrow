@@ -1,7 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
 import { browser } from 'wxt/browser';
-import { CLAY_ORIGIN_PATTERN } from '@/lib/constants';
-import { hasClayPermission, requestClayPermission, revokeClayPermission } from '@/lib/permissions';
+import {
+  hasClayPermission,
+  requestClayPermission,
+  revokeClayPermission,
+} from '@/platform/permissions';
+import { CLAY_ORIGIN_PATTERN } from '@/shared/constants';
 
 interface TestPermissionsApi {
   request(permissions: { origins: string[] }): Promise<boolean>;

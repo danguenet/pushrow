@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { getRecommendations, ruleMatches, validateRegexPattern } from '@/lib/rules';
-import type { Destination, PageRecord, RoutingRule } from '@/lib/types';
+import { getRecommendations, ruleMatches, validateRegexPattern } from '@/shared/rules';
+import type { Destination, PageRecord, RoutingRule } from '@/shared/types';
 
 const record: PageRecord = {
   source: 'salesforce',
@@ -60,12 +60,30 @@ describe('routing rules', () => {
     ).toBe(true);
   });
 
-  it('rejects invalid, long, backreferenced, and risky patterns', () => {
+  it('rejects invalid, long, and RE2-incompatible patterns', () => {
     expect(validateRegexPattern('[').valid).toBe(false);
     expect(validateRegexPattern('a'.repeat(257)).valid).toBe(false);
     expect(validateRegexPattern('(a)\\1').valid).toBe(false);
-    expect(validateRegexPattern('(a+)+').valid).toBe(false);
-    expect(validateRegexPattern('.*foo.*bar').valid).toBe(false);
+    expect(validateRegexPattern('(?=unsafe-lookahead)').valid).toBe(false);
+    expect(validateRegexPattern('(a+)+').valid).toBe(true);
+  });
+
+  it('evaluates adversarial patterns in bounded time', () => {
+    const startedAt = performance.now();
+    expect(
+      ruleMatches(
+        {
+          id: 'adversarial',
+          name: 'adversarial',
+          destinationId: 'contacts',
+          enabled: true,
+          priority: 0,
+          matcher: { kind: 'regex', pattern: '^(a|aa)+$' },
+        },
+        { ...record, url: `${'a'.repeat(2_047)}!` },
+      ),
+    ).toBe(false);
+    expect(performance.now() - startedAt).toBeLessThan(100);
   });
 
   it('orders all matches and deduplicates a destination by its highest rule', () => {

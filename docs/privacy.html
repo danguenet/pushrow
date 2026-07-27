@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Posthook privacy policy" />
-    <title>Posthook Privacy Policy</title>
+    <meta name="description" content="Push Row privacy policy" />
+    <title>Push Row Privacy Policy</title>
     <style>
       :root {
         color: #172033;
@@ -58,40 +58,48 @@
   </head>
   <body>
     <main>
-      <div class="eyebrow">Posthook</div>
+      <div class="eyebrow">Push Row</div>
       <h1>Privacy policy</h1>
-      <p class="updated">Effective July 14, 2026</p>
+      <p class="updated">Effective July 15, 2026</p>
       <div class="card">
         <strong>Local by design.</strong>
         <p>
-          Posthook has no Posthook-operated server, account system, analytics, advertising, or
+          Push Row has no Push Row-operated server, account system, analytics, advertising, or
           telemetry.
         </p>
       </div>
       <h2>Data handled</h2>
       <p>
-        Posthook stores the destinations, optional authentication values, and routing rules you
-        create in persistent Chrome extension storage on your device. That storage is private to
-        trusted Posthook contexts, but it is not encrypted at rest.
+        Push Row stores destinations, optional authentication values, routing rules, and bounded
+        activity settings in persistent Chrome extension storage on your device. That storage is
+        private to trusted Push Row contexts, but it is not encrypted at rest.
       </p>
       <p>
-        When you click Send, Posthook derives source, URL, record ID, and object type from the
-        active tab URL and sends those four fields to the Clay webhook you selected. Clay handles
-        that request under its own terms and privacy practices.
+        By default, Push Row keeps the latest 10 send attempts locally. Each entry contains its
+        time, destination ID and name, the four-field request, and an HTTP status or local error
+        code. Activity never contains a webhook URL, authentication value, or response body. You can
+        retain 1–100 entries or turn activity off.
+      </p>
+      <p>
+        When you click Send, Push Row derives source, URL, record ID, and object type from the
+        active tab URL and sends those four fields to the Clay webhook you selected. If you
+        configured an authentication header, its name and value are sent with that request. Clay
+        handles that request under its own terms and privacy practices.
       </p>
       <h2>Data not collected</h2>
       <p>
-        Posthook does not collect page content, cookies, browsing history, send history, analytics,
-        telemetry, or webhook response bodies. It does not sell or share data for advertising.
+        Push Row does not collect page content, cookies, browsing history, analytics, telemetry, or
+        webhook response bodies. It does not sell or share data for advertising.
       </p>
       <h2>Your controls</h2>
       <p>
-        You can edit or delete destinations and rules at any time. Delete all local data removes
-        every Posthook setting and token and revokes the optional Clay host permission.
+        You can edit or delete destinations and rules, clear activity, or turn activity off. Delete
+        all local data removes every Push Row setting, token, and activity entry and revokes the
+        optional Clay host permission.
       </p>
       <h2>Permissions</h2>
       <p>
-        Posthook uses activeTab after you invoke the toolbar action, storage for local settings, and
+        Push Row uses activeTab after you invoke the toolbar action, storage for local settings, and
         optional access to api.clay.com only for a request you initiate.
       </p>
       <h2>Changes and contact</h2>

@@ -1,24 +1,26 @@
-# Posthook privacy policy
+# Push Row privacy policy
 
-Effective: July 14, 2026
+Effective: July 15, 2026
 
-Posthook is a local-only Chrome extension. It has no Posthook-operated server, account system, analytics, advertising, or telemetry.
+Push Row is a local-only Chrome extension. It has no Push Row-operated server, account system, analytics, advertising, or telemetry.
 
 ## Data handled
 
-Posthook stores the destinations, optional authentication header values, and routing rules you create in persistent `chrome.storage.local` on your device. Chrome extension storage is restricted to trusted Posthook contexts, but it is not encrypted at rest.
+Push Row stores the destinations, optional authentication header values, routing rules, and bounded activity settings you create in persistent `chrome.storage.local` on your device. Chrome extension storage is restricted to trusted Push Row contexts, but it is not encrypted at rest.
 
-When you click Send, Posthook derives `source`, `url`, `record_id`, and `object_type` from the active tab URL and sends those four fields to the Clay webhook you selected. An optional configured authentication header is sent with that request. Clay's handling of a request is governed by Clay's own terms and privacy practices.
+When you click Send, Push Row derives `source`, `url`, `record_id`, and `object_type` from the active tab URL and sends those four fields to the Clay webhook you selected. An optional configured authentication header is sent with that request. Clay's handling of a request is governed by Clay's own terms and privacy practices.
 
-Posthook does not collect page content, cookies, browsing history, send history, or diagnostic response bodies. It does not sell or share data for advertising or analytics.
+By default, Push Row keeps the latest 10 send attempts locally. Each entry contains its time, destination ID and name, the four-field request, and either the HTTP status or a local error code. It never stores the destination webhook URL, authentication value, or response body in activity. You can retain 1–100 entries or set retention to 0 to turn activity off.
+
+Push Row does not collect page content, cookies, browsing history, analytics, telemetry, or diagnostic response bodies. It does not sell or share data for advertising or analytics.
 
 ## Control and deletion
 
-You can edit or delete individual destinations and rules. “Delete all local data” removes all Posthook settings and tokens and revokes Posthook's optional Clay host permission. Uninstalling the extension also removes its local extension storage under Chrome's normal behavior.
+You can edit or delete individual destinations and rules, clear activity independently, or turn activity off. “Delete all local data” removes all Push Row settings, tokens, and activity and revokes Push Row's optional Clay host permission. Uninstalling the extension also removes its local extension storage under Chrome's normal behavior.
 
 ## Permissions
 
-Posthook uses `activeTab` to read the current page URL only after you invoke the toolbar action, `storage` for local settings, and optional access to `https://api.clay.com/*` solely to send the request you initiate.
+Push Row uses `activeTab` to read the current page URL only after you invoke the toolbar action, `storage` for local settings, and optional access to `https://api.clay.com/*` solely to send the request you initiate.
 
 ## Changes and contact
 

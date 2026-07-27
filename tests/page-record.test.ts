@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parsePageRecord } from '@/lib/page-record';
+import { parsePageRecord } from '@/shared/page-record';
 
 describe('parsePageRecord', () => {
   it('canonicalizes a LinkedIn profile URL', () => {

@@ -4,7 +4,7 @@ import {
   parseDestinationInput,
   validateAuth,
   validateClayWebhookUrl,
-} from '@/lib/destinations';
+} from '@/shared/destinations';
 
 const WEBHOOK =
   'https://api.clay.com/v3/sources/webhook/pull-in-data-from-a-webhook-example-test-id';

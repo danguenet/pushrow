@@ -2,9 +2,11 @@
 node_modules/
 
 # WXT and build output
-.output/
+dist/
 .wxt/
 *.zip
+*.crx
+*.pem
 *.tsbuildinfo
 
 # Tests and coverage

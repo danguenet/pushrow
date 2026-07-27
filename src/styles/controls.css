@@ -1,0 +1,17 @@
+.primary-button,
+.secondary-button,
+.danger-button,
+.small-button,
+.icon-button,
+.row-action,
+.text-button {
+  cursor: pointer;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled,
+.danger-button:disabled,
+.small-button:disabled,
+.row-action:disabled {
+  cursor: not-allowed;
+}
