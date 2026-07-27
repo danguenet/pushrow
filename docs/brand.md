@@ -11,7 +11,7 @@ Use **Push Row** with a space and title case in user-facing copy. Use `pushrow` 
 
 ## Mark
 
-The mark is three horizontal rows with the middle row moving right. Use the standalone mark without letters inside the icon. It must remain readable at the 16-pixel Chrome toolbar size.
+The mark is three horizontal rows that increase in length and step down to the right, expressing records progressing toward a destination. Use the standalone mark without letters inside the icon. It must remain readable at the 16-pixel Chrome toolbar size.
 
 The source of truth is `assets/icon-source.svg`. Run `npm run assets` after editing it; do not edit raster icons directly.
 
