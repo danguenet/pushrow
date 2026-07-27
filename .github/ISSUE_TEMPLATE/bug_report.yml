@@ -1,0 +1,68 @@
+name: Bug report
+description: Report reproducible behavior that does not work as expected.
+title: '[Bug]: '
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Do not include webhook URLs, tokens, private CRM URLs, or customer data.
+  - type: input
+    id: version
+    attributes:
+      label: Push Row version
+      description: Use the release tag or commit SHA.
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version and operating system
+      placeholder: Chrome 140 on macOS 26
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Popup and record detection
+        - Destinations
+        - Routing rules
+        - Activity
+        - Data deletion
+        - Build or development workflow
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use sanitized example URLs and placeholder values only.
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: sanitized
+    attributes:
+      label: Data check
+      options:
+        - label: I removed secrets, private URLs, and personal or customer data from this report.
+          required: true

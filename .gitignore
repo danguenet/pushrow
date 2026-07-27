@@ -5,6 +5,8 @@ node_modules/
 dist/
 .wxt/
 *.zip
+*.crx
+*.pem
 *.tsbuildinfo
 
 # Tests and coverage

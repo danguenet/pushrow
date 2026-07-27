@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest an improvement that fits Push Row's deliberate, URL-only workflow.
+title: '[Feature]: '
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Explain the workflow limitation without including private URLs or customer data.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe what Push Row should do from the user's perspective.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Expected permission or privacy impact
+      options:
+        - None
+        - Changes local data handling
+        - Requires a new browser permission
+        - Requires a new network destination
+        - Unsure
+    validations:
+      required: true

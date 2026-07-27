@@ -15,6 +15,9 @@ The mark is three horizontal rows with the middle row moving right. Use the stan
 
 The source of truth is `assets/icon-source.svg`. Run `npm run assets` after editing it; do not edit raster icons directly.
 
+The repository social preview source is `store-assets/social-preview-1280x640.svg`. The same asset
+command renders its PNG for upload in GitHub repository settings.
+
 ## Color and type
 
 | Role      | Value     |

@@ -58,6 +58,15 @@ try {
       false,
     );
   }
+
+  await renderSvg(
+    'store-assets/social-preview-1280x640.svg',
+    'store-assets/social-preview-1280x640.png',
+    1280,
+    640,
+    'png',
+    false,
+  );
 } finally {
   await browser.close();
 }

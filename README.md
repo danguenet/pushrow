@@ -6,12 +6,17 @@
 **CRM records to Clay, in one click.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-3157D5.svg)](LICENSE)
+[![CI](https://github.com/danguenet/pushrow/actions/workflows/ci.yml/badge.svg)](https://github.com/danguenet/pushrow/actions/workflows/ci.yml)
+[![GitHub release](https://img.shields.io/github/v/release/danguenet/pushrow?display_name=tag&sort=semver)](https://github.com/danguenet/pushrow/releases)
 [![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white)](.nvmrc)
 [![Chrome MV3](https://img.shields.io/badge/Chrome-Manifest_V3-4285F4?logo=googlechrome&logoColor=white)](wxt.config.ts)
 
 </div>
 
 Push Row is a privacy-focused Chrome extension for pushing LinkedIn and CRM records to [Clay](https://www.clay.com/) webhooks. It recognizes the active record from its URL, recommends a destination using your routing rules, and sends only when you click **Send**.
+
+**Project status:** early release (`0.1.x`). Push Row supports desktop Chrome only and is not yet
+distributed through the Chrome Web Store.
 
 ![Push Row destination settings](store-assets/screenshot-1280x800.png)
 
@@ -47,12 +52,26 @@ Each send is one JSON `POST` containing exactly four fields:
 
 LinkedIn profiles do not expose a stable record ID in the URL, so `record_id` is `null` for that source.
 
-## Install locally
+## Install
 
-You need Chrome, [Node.js 24](https://nodejs.org/), and npm. Clone or fork the repository, then run from its root:
+### From a GitHub release
+
+1. Download `pushrow-<version>-chrome.zip` from the [latest release](https://github.com/danguenet/pushrow/releases/latest).
+2. Extract the archive to a permanent local folder.
+3. Open `chrome://extensions`, enable **Developer mode**, and choose **Load unpacked**.
+4. Select the extracted folder.
+
+Chrome does not update locally loaded extensions automatically. Repeat these steps when installing
+a newer release.
+
+### From source
+
+You need Chrome, [Node.js 24](https://nodejs.org/), and npm:
 
 ```bash
-npm install
+git clone https://github.com/danguenet/pushrow.git
+cd pushrow
+npm ci
 npm run build
 ```
 
@@ -81,7 +100,7 @@ Read the [privacy policy](PRIVACY.md), [permission rationale](docs/permissions.m
 ## Development
 
 ```bash
-npm install
+npm ci
 npx playwright install chromium
 npm run check
 npm run test:e2e
@@ -89,16 +108,24 @@ npm run test:e2e
 
 `npm run check` runs linting, formatting checks, TypeScript, unit tests, a production build, and package validation. Use `npm run zip` to create a release archive in the repository root.
 
-Run `npm run assets` after changing an SVG source or the settings UI. It regenerates the icons and promo tile, builds the extension, and captures the store screenshot from the actual options page.
+Run `npm run assets` after changing an SVG source or the settings UI. It regenerates the icons,
+promotional graphics, and repository social preview, builds the extension, and captures the store
+screenshot from the actual options page.
 
 Before a release, complete the [manual user-owned webhook check](docs/manual-release-check.md). Tests and fixtures must contain placeholder credentials only.
 
-Contributions are welcome—see [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+## Support and contributions
+
+- Report reproducible problems with the [bug report form](https://github.com/danguenet/pushrow/issues/new?template=bug_report.yml).
+- Suggest improvements with the [feature request form](https://github.com/danguenet/pushrow/issues/new?template=feature_request.yml).
+- Review the [contribution guide](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md) before opening a pull request.
+- Report vulnerabilities privately through [GitHub Security Advisories](https://github.com/danguenet/pushrow/security/advisories/new), not a public issue.
 
 ## Project documentation
 
 - [Architecture](docs/architecture.md)
 - [Brand system](docs/brand.md)
+- [Changelog](CHANGELOG.md)
 - [Permission rationale](docs/permissions.md)
 - [Privacy policy](PRIVACY.md)
 - [Chrome Web Store copy](docs/store-listing.md)

@@ -2,6 +2,23 @@
   "name": "pushrow",
   "version": "0.1.0",
   "description": "Push LinkedIn and CRM records to Clay tables from Chrome.",
+  "keywords": [
+    "chrome-extension",
+    "clay",
+    "linkedin",
+    "hubspot",
+    "salesforce",
+    "attio",
+    "wxt"
+  ],
+  "homepage": "https://github.com/danguenet/pushrow#readme",
+  "bugs": {
+    "url": "https://github.com/danguenet/pushrow/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danguenet/pushrow.git"
+  },
   "type": "module",
   "private": true,
   "license": "MIT",

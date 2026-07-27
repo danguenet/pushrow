@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#F5F7FB" />
+  <circle cx="1160" cy="40" r="300" fill="#E4E9FF" />
+  <circle cx="30" cy="660" r="250" fill="#E8ECF8" />
+
+  <g opacity=".74">
+    <rect x="900" y="150" width="220" height="34" rx="17" fill="#C9D4FF" />
+    <path
+      d="M922 222h146v-28l66 48-66 48v-28H922a20 20 0 0 1 0-40Z"
+      fill="#AFC0FF"
+    />
+    <rect x="900" y="300" width="220" height="34" rx="17" fill="#C9D4FF" />
+  </g>
+
+  <rect x="120" y="118" width="164" height="164" rx="42" fill="#3157D5" />
+  <rect x="158" y="157" width="68" height="18" rx="9" fill="#FFFFFF" />
+  <path
+    d="M168 193h46v-14l34 22-34 22v-14h-46a8 8 0 0 1 0-16Z"
+    fill="#FFFFFF"
+  />
+  <rect x="158" y="227" width="68" height="18" rx="9" fill="#FFFFFF" />
+
+  <text
+    x="120"
+    y="410"
+    fill="#172033"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+    font-size="92"
+    font-weight="750"
+    letter-spacing="-3"
+  >
+    Push Row
+  </text>
+  <text
+    x="124"
+    y="478"
+    fill="#58647B"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+    font-size="34"
+    font-weight="500"
+  >
+    CRM records to Clay, in one click.
+  </text>
+  <rect x="124" y="520" width="300" height="8" rx="4" fill="#3157D5" />
+</svg>
