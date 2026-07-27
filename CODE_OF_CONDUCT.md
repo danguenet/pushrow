@@ -49,7 +49,7 @@ representing the community in public spaces.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported privately to
-the project maintainer at [danguenet@gmail.com](mailto:danguenet@gmail.com). All complaints will be
+the project maintainer at [dan@performancerevops.com](mailto:dan@performancerevops.com). All complaints will be
 reviewed and investigated promptly and fairly.
 
 The project maintainer is obligated to respect the privacy and security of the reporter of any
