@@ -35,4 +35,7 @@ Push Row is independent open-source software and is not affiliated with Clay, Li
 
 - Store icon: `store-assets/icon-128.png`
 - Screenshot: `store-assets/screenshot-1280x800.png`
+- Popup screenshot: `store-assets/popup-screenshot-1280x800.png`
 - Promotional tile: `store-assets/promo-440x280.jpg`
+- Marquee promotional tile: `store-assets/marquee-1400x560.jpg`
+- Demo video: `store-assets/push-row-demo.mp4`

@@ -57,6 +57,14 @@ try {
       type,
       false,
     );
+    await renderSvg(
+      'store-assets/marquee-1400x560.svg',
+      `store-assets/marquee-1400x560.${extension}`,
+      1400,
+      560,
+      type,
+      false,
+    );
   }
 
   await renderSvg(

@@ -29,6 +29,8 @@
   "scripts": {
     "assets": "node scripts/render-assets.mjs && npm run store:screenshot",
     "store:screenshot": "npm run build && node scripts/capture-store-screenshot.mjs",
+    "store:popup-screenshot": "npm run build && node scripts/capture-popup-store-screenshot.mjs",
+    "store:demo-video": "npm run build && node scripts/capture-store-demo.mjs",
     "dev": "wxt",
     "build": "wxt build",
     "zip": "wxt zip",

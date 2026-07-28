@@ -12,6 +12,7 @@
   <rect x="59" y="77" width="43" height="10" rx="5" fill="#fff"/>
   <rect x="63" y="96" width="51" height="10" rx="5" fill="#fff"/>
   <text x="44" y="172" fill="#172033" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="42" font-weight="750" letter-spacing="-1.5">Push Row</text>
-  <text x="45" y="207" fill="#58647B" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="500">CRM records to Clay, in one click.</text>
-  <rect x="44" y="230" width="124" height="3" rx="1.5" fill="#3157D5"/>
+  <text x="45" y="203" fill="#58647B" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="500">CRM records or LinkedIn URLs</text>
+  <text x="45" y="224" fill="#58647B" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="500">to Clay, in one click.</text>
+  <rect x="44" y="244" width="124" height="3" rx="1.5" fill="#3157D5"/>
 </svg>
