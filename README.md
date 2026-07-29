@@ -8,6 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-3157D5.svg)](LICENSE)
 [![Build and test](https://github.com/danguenet/pushrow/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/danguenet/pushrow/actions/workflows/build-and-release.yml)
 [![GitHub release](https://img.shields.io/github/v/release/danguenet/pushrow?display_name=tag&sort=semver)](https://github.com/danguenet/pushrow/releases)
+[![Install from Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Install-4285F4?logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/push-row/aapbdcmpfglanhbolhlnmkoknegegogf)
 [![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white)](.nvmrc)
 [![Chrome MV3](https://img.shields.io/badge/Chrome-Manifest_V3-4285F4?logo=googlechrome&logoColor=white)](wxt.config.ts)
 
@@ -15,8 +16,7 @@
 
 Push Row is a privacy-focused Chrome extension for pushing LinkedIn and CRM records to [Clay](https://www.clay.com/) webhooks. It recognizes the active record from its URL, recommends a destination using your routing rules, and sends only when you click **Send**.
 
-**Project status:** stable release (`1.0.x`). Push Row supports desktop Chrome only and is not yet
-distributed through the Chrome Web Store.
+**Project status:** stable release (`1.0.x`). Push Row supports desktop Chrome only.
 
 ![Push Row destination settings](store-assets/screenshot-1280x800.png)
 
