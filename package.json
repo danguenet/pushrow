@@ -47,7 +47,7 @@
     "check": "npm run lint && npm run format:check && npm run typecheck && npm run test:coverage && npm run build && npm run package:check"
   },
   "dependencies": {
-    "lucide-react": "^1.27.0",
+    "lucide-react": "^1.28.0",
     "re2js": "^2.8.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
